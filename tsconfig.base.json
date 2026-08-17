@@ -9,8 +9,6 @@
     "noImplicitOverride": true,
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
-    "skipLibCheck": true,
-    "declaration": true,
-    "sourceMap": true
+    "skipLibCheck": true
   }
 }
