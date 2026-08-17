@@ -1,0 +1,12 @@
+pre-commit:
+  commands:
+    lint:
+      {
+        glob: "*.{ts,tsx,js,json,css}",
+        run: "pnpm exec biome check --write {staged_files}",
+        stage_fixed: true,
+      }
+pre-push:
+  commands:
+    typecheck: { run: "pnpm run typecheck" }
+    test: { run: "pnpm run test" }

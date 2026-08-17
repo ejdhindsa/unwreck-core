@@ -1,5 +1,109 @@
 {
   "name": "@unwreck/core",
-  "version": "0.0.0",
-  "main": "index.js"
+  "version": "0.1.0",
+  "description": "Design tokens, themes, fonts and icons for unwreck",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "default": "./dist/theme.js"
+    },
+    "./vite": {
+      "types": "./dist/vite.d.ts",
+      "default": "./dist/vite.js"
+    },
+    "./css": "./dist/tokens.css",
+    "./tailwind": "./dist/tailwind.css",
+    "./reset": "./dist/reset.css",
+    "./tokens.json": "./dist/tokens.json",
+    "./fonts.css": "./dist/fonts/all.css",
+    "./fonts/sans": "./dist/fonts/sans.css",
+    "./fonts/display": "./dist/fonts/display.css",
+    "./fonts/mono": "./dist/fonts/mono.css",
+    "./icons": {
+      "types": "./dist/icons/index.d.ts",
+      "default": "./dist/icons/index.js"
+    },
+    "./icons/react": {
+      "types": "./dist/icons/react/index.d.ts",
+      "default": "./dist/icons/react/index.js"
+    },
+    "./icons/vue": {
+      "types": "./dist/icons/vue/index.d.ts",
+      "default": "./dist/icons/vue/index.js"
+    },
+    "./icons/svelte": {
+      "types": "./dist/icons/svelte/index.d.ts",
+      "default": "./dist/icons/svelte/index.js"
+    },
+    "./icons/sprite.svg": "./dist/icons/sprite.svg",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "vue": ">=3",
+    "svelte": ">=4",
+    "vite": ">=6"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    },
+    "vite": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "culori": "^4.0.1",
+    "svgo": "^3.3.0",
+    "tsdown": "^0.9.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  },
+  "scripts": {
+    "generate": "tsx src/build.ts",
+    "build": "pnpm run generate && tsdown",
+    "dev": "pnpm run generate && tsdown --watch"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOURNAME/unwreck-core.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/YOURNAME/unwreck-core",
+  "bugs": "https://github.com/YOURNAME/unwreck-core/issues",
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "css-variables",
+    "oklch",
+    "tailwind",
+    "unwreck"
+  ]
 }
