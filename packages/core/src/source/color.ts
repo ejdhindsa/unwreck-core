@@ -1,6 +1,6 @@
 import { buildScale } from '../generate/scale'
 
-const BRAND = '#E4562A'
+const BRAND = '#439124'
 
 export const scales = {
   neutral: buildScale('neutral', { anchor: BRAND, chromaScale: 0.055 }),
