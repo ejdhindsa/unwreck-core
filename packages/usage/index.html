@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unwreck Core Colors</title>
+  <script type="module" src="./main.ts"></script>
+  <style>
+    body {
+      font-family: var(--uw-font-sans, system-ui, sans-serif);
+      background-color: var(--uw-bg-canvas);
+      color: var(--uw-fg-default);
+      padding: 2rem;
+      margin: 0;
+      min-height: 100vh;
+      transition: background-color var(--uw-duration-normal) var(--uw-easing-standard), color var(--uw-duration-normal) var(--uw-easing-standard);
+    }
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .swatch {
+      height: 120px;
+      border-radius: var(--uw-radius-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      box-shadow: var(--uw-shadow-sm);
+      border: 1px solid var(--uw-border-subtle);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .swatch:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--uw-shadow-md);
+    }
+    .swatch span {
+      opacity: 0.8;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--uw-border-subtle);
+      padding-bottom: 1rem;
+    }
+    button {
+      background-color: var(--uw-brand-solid);
+      color: var(--uw-brand-on-solid);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--uw-radius-md);
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.875rem;
+      box-shadow: var(--uw-shadow-md);
+      transition: all var(--uw-duration-fast) var(--uw-easing-standard);
+    }
+    button:hover {
+      background-color: var(--uw-brand-solid-hover);
+      transform: translateY(-1px);
+    }
+    button:focus-visible {
+      outline: 2px solid var(--uw-focus-ring);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎨 @unwreck/core</h1>
+    <button type="button" id="theme-toggle">Toggle Dark Mode</button>
+  </header>
+  
+  <h2>Brand Scale (Primitive)</h2>
+  <div class="swatch-grid" id="brand-grid"></div>
+
+  <h2>Semantic Surfaces</h2>
+  <div class="swatch-grid" id="semantic-grid"></div>
+</body>
+</html>
