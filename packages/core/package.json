@@ -1,6 +1,6 @@
 {
   "name": "@unwreck/core",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Design tokens, themes, fonts and icons for unwreck",
   "type": "module",
   "license": "MIT",
@@ -93,11 +93,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOURNAME/unwreck-core.git",
+    "url": "git+https://github.com/ejdhindsa/unwreck-core.git",
     "directory": "packages/core"
   },
-  "homepage": "https://github.com/YOURNAME/unwreck-core",
-  "bugs": "https://github.com/YOURNAME/unwreck-core/issues",
+  "homepage": "https://github.com/ejdhindsa/unwreck-core",
+  "bugs": "https://github.com/ejdhindsa/unwreck-core/issues",
   "keywords": [
     "design-tokens",
     "design-system",
