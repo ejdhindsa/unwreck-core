@@ -10,3 +10,4 @@ pre-push:
   commands:
     typecheck: { run: "pnpm run typecheck" }
     test: { run: "pnpm run test" }
+    check-pkg: { run: "pnpm run build && pnpm run check:pkg" }

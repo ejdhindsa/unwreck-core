@@ -1,14 +1,15 @@
 {
   "name": "@unwreck/core",
-  "version": "1.0.0",
-  "description": "Design tokens, themes, fonts and icons for unwreck",
+  "version": "1.0.1",
+  "description": "Design tokens, themes, fonts, and CSS reset for unwreck",
   "type": "module",
   "license": "MIT",
   "sideEffects": [
     "**/*.css"
   ],
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "exports": {
     ".": {
@@ -31,48 +32,18 @@
     "./fonts/sans": "./dist/fonts/sans.css",
     "./fonts/display": "./dist/fonts/display.css",
     "./fonts/mono": "./dist/fonts/mono.css",
-    "./icons": {
-      "types": "./dist/icons/index.d.ts",
-      "default": "./dist/icons/index.js"
-    },
-    "./icons/react": {
-      "types": "./dist/icons/react/index.d.ts",
-      "default": "./dist/icons/react/index.js"
-    },
-    "./icons/vue": {
-      "types": "./dist/icons/vue/index.d.ts",
-      "default": "./dist/icons/vue/index.js"
-    },
-    "./icons/svelte": {
-      "types": "./dist/icons/svelte/index.d.ts",
-      "default": "./dist/icons/svelte/index.js"
-    },
-    "./icons/sprite.svg": "./dist/icons/sprite.svg",
     "./package.json": "./package.json"
   },
   "peerDependencies": {
-    "react": ">=18",
-    "vue": ">=3",
-    "svelte": ">=4",
     "vite": ">=6"
   },
   "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    },
-    "vue": {
-      "optional": true
-    },
-    "svelte": {
-      "optional": true
-    },
     "vite": {
       "optional": true
     }
   },
   "devDependencies": {
     "culori": "^4.0.1",
-    "svgo": "^3.3.0",
     "tsdown": "^0.9.0",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0",

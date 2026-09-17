@@ -14,14 +14,14 @@
     "typecheck": "pnpm -r --filter './packages/*' exec tsc --noEmit",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
-    "check:pkg": "pnpm -r --filter './packages/*' exec publint && pnpm -r --filter './packages/*' exec attw --pack .",
+    "check:pkg": "pnpm --filter @unwreck/core exec publint && pnpm --filter @unwreck/core exec attw --pack . --entrypoints . ./theme ./vite --profile esm-only",
     "verify": "pnpm run lint && pnpm run typecheck && pnpm run build && pnpm run test && pnpm run check:pkg",
     "changeset": "changeset",
     "version:packages": "changeset version && pnpm install --lockfile-only",
     "release": "pnpm run build && changeset publish"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.17.0",
+    "@arethetypeswrong/cli": "^0.18.5",
     "@biomejs/biome": "^2.0.0",
     "@changesets/cli": "^2.27.0",
     "@types/culori": "^4.0.1",
